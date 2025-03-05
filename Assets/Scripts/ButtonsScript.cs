@@ -18,8 +18,20 @@ public class ButtonsScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-
+            if(isPaused == true)
+            {
+                PauseGame();
+            }
+            else if(isPaused == false)
+            {
+                PlayGame();
+            }
         }
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Level1");
     }
 
     public void PauseGame()
